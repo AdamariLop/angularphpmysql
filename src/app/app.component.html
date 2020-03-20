@@ -1,0 +1,27 @@
+<h1>Lista de usuarios registrados</h1>
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">ID</th>
+    <th scope="col">NOMBRE</th>
+    <th scope="col">TELEFONO</th>
+    <th scope="col">EMAIL</th>
+    <th scope="col">BORRAR</th>
+    <th scope="col">SELECCIONAR</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let usuario of usuarios">
+    <th scope="row">{{usuario.idUsuario}}</th>
+    <td>{{usuario.nombre}}</td>
+    <td>{{usuario.telefono}}</td>
+    <td>{{usuario.email}}</td>
+    <td><button type="button" class="btn btn-dark">Borrar</button></td>
+    <td><button type="button" class="btn btn-dark">Seleccionar</button></td>
+  </tr>
+  </tbody>
+</table>
+
+<ng-template #sin>
+  <p>No hay usuarios registrados</p>
+</ng-template>
