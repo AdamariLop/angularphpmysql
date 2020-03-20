@@ -1,5 +1,5 @@
 <h1>Lista de usuarios registrados</h1>
-<table class="table">
+<table *ngIf="hayRegistros(); else sin" class="table">
   <thead class="thead-dark">
   <tr>
     <th scope="col">ID</th>

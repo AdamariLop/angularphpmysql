@@ -24,4 +24,12 @@ export class AppComponent implements OnInit {
       result => this.usuarios = result
     );
   }
+
+  hayRegistros(){
+    if(this.usuarios==null){
+      return false;
+    }else{
+      return true;
+    }
+  }
 }
